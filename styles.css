@@ -1,0 +1,38 @@
+/* Part 1: CSS3 Transitions and Animations */
+
+/* Simple transition for a button hover effect */
+.interactive-button {
+  background-color: #007bff;
+  color: white;
+  padding: 15px 30px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.interactive-button:hover {
+  background-color: #0056b3;
+  transform: scale(1.1); /* Zooms in slightly */
+}
+
+/* Keyframe animation for a continuous pulse effect */
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(0, 123, 255, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 20px rgba(0, 123, 255, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(0, 123, 255, 0);
+  }
+}
+
+.pulsing-box {
+  width: 100px;
+  height: 100px;
+  background-color: #007bff;
+  margin: 50px;
+  animation: pulse 2s infinite; /* Applies the 'pulse' animation */
+}
